@@ -1,5 +1,6 @@
 package com.jk.app.kotlinefirst.UI
 
+import android.support.v4.content.ContextCompat.getColor
 import android.text.InputType.TYPE_CLASS_TEXT
 import android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD
 import android.view.Gravity
@@ -7,6 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import com.jk.app.kotlinefirst.LoginActivity
 import com.jk.app.kotlinefirst.R
+import kotlinx.android.synthetic.main.activity_main.view.*
 import org.jetbrains.anko.AnkoComponent
 import org.jetbrains.anko.*
 import org.jetbrains.anko.sdk25.coroutines.onClick
@@ -15,7 +17,7 @@ import org.jetbrains.anko.sdk25.coroutines.onClick
  * Created by jitendraprajapati on 28/05/17.
  */
 
-public  class LoginActivityUI : AnkoComponent<LoginActivity>{
+class LoginActivityUI : AnkoComponent<LoginActivity>{
 
     private val customStyle = { v: Any ->
         when (v) {
@@ -28,10 +30,7 @@ public  class LoginActivityUI : AnkoComponent<LoginActivity>{
         verticalLayout {
             padding = dip(32)
 
-            imageView(android.R.drawable.ic_menu_manage).lparams {
-                margin= dip(16)
-                gravity = Gravity.CENTER
-            }
+
 
             val name = editText {
                 hintResource = R.string.Jitendra
